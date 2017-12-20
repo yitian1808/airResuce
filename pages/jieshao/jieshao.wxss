@@ -1,0 +1,33 @@
+/* pages/jieshao/jieshao.wxss */
+.aboutTitle{
+    margin: 10px 0 15px 0;
+}
+.aboutTitleSpan{
+    border-bottom: 3px solid #026a19;
+    color: #026a19;
+    font-size: 22px;
+}
+.aboutH{
+  font-size: 18px;
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.aboutInfo{
+    font-size: 16px;
+    line-height: 26px;
+    margin-bottom: 5px;
+    text-indent: 26px;
+    display: block;
+    color:#666;
+}
+.aboutInfoSpan{
+  color:#c20c0c;
+  font-size: 24px;
+  padding:0 1px;
+  font-weight: bold;
+}
+.about-img{
+  width:96%;
+  margin: 5px auto;
+}
