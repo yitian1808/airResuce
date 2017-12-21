@@ -16,55 +16,55 @@
 <view  class="list-wrp" >
   <view class="list-list">
     <navigator url="../jieshao/jieshao" >
-        <image class="list-img" src="../../images/list01.png"/>
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list01.png"/>
         <view  class="list-title" >项目介绍</view>
     </navigator>
   </view>
   <view class="list-list">
-    <navigator url="../jieshao/jieshao" >
-        <image class="list-img" src="../../images/list02.png"/>
+    <navigator url="../about/about" >
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list02.png"/>
         <view  class="list-title" >关于空中救护</view>
     </navigator>
   </view>
   <view class="list-list">
-    <navigator url="../jieshao/jieshao">
-        <image class="list-img" src="../../images/list03.png"/>
+    <navigator url="../shebei/shebei">
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list03.png"/>
         <view  class="list-title" >空中救护设备</view>
     </navigator>
   </view>
   <view class="list-list">
-    <navigator url="../jieshao/jieshao">
-        <image class="list-img" src="../../images/list04.png"/>
+    <navigator url="../jidi/jidi">
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list04.png"/>
         <view  class="list-title" >  救援基地  </view>
     </navigator>
   </view>
   <view class="list-list">
-    <navigator url="../jieshao/jieshao" >
-        <image class="list-img" src="../../images/list05.png"/>
+    <navigator url="../yiyuan/yiyuan" >
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list05.png"/>
         <view  class="list-title" >  合作医院  </view>
     </navigator>
   </view>
   <view class="list-list">
-    <navigator url="../jieshao/jieshao">
-        <image class="list-img" src="../../images/list06.png"/>
+    <navigator url="../lingdao/lingdao">
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list06.png"/>
         <view  class="list-title" >领导专家支持</view>
     </navigator>
   </view>
   <view class="list-list">
-    <navigator url="../jieshao/jieshao">
-        <image class="list-img" src="../../images/list07.png"/>
+    <navigator url="../liucheng/liucheng">
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list07.png"/>
         <view  class="list-title" >服务流程</view>
     </navigator>
   </view>
   <view class="list-list">
-    <navigator url="../jieshao/jieshao" >
-        <image class="list-img" src="../../images/list08.png"/>
+    <navigator url="../news/news" >
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list08.png"/>
         <view  class="list-title" >新闻速递  </view>
     </navigator>
   </view>
   <view class="list-list">
     <navigator url="../jieshao/jieshao">
-        <image class="list-img" src="../../images/list09.png"/>
+        <image class="list-img" src="http://www.hems999.com/mobile//images/list09.png"/>
         <view  class="list-title" >加入我们</view>
     </navigator>
   </view>

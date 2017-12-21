@@ -16,19 +16,25 @@
 
 <view  class="menu-wrp">
   <view class="menu-list">
+    <navigator url="../jieshao/jieshao" hover-class="menu-navigator-hover">
     <view  class="menu-title" style='color:#89bc39;' >覆盖山东全省</view>
-    <view  class="menu-desc" >保障山东全省高速公路安全</view>
-    <image class="menu-img" src="../../images/index01.png"/>
+    <text  class="menu-desc" >保障山东全省\n高速公路安全</text>
+    <image class="menu-img" src="http://www.hems999.com/mobile//images/index01.png"/>
+    </navigator>
   </view>
   <view class="menu-list">
+  <navigator url="../shebei/shebei" hover-class="menu-navigator-hover">
     <view  class="menu-title" style='color:#e9480c;' >专业的医疗设备</view>
-    <view  class="menu-desc" style="width:94px;" >直升机配备专业的急救医疗设备</view>
-    <image class="menu-img" src="../../images/index02.png"/>
+    <text  class="menu-desc">直升机配备专业\n的急救医疗设备</text>
+    <image class="menu-img" src="http://www.hems999.com/mobile//images/index02.png"/>
+    </navigator>
   </view>
   <view class="menu-list" style='margin-right:0;'>
+  <navigator url="../jieshao/jieshao" hover-class="menu-navigator-hover">
     <view  class="menu-title" style='color:#54a8f8;' >覆盖山东全省</view>
-    <view  class="menu-desc" >30-60分钟到达现场</view>
-    <image class="menu-img" src="../../images/index03.png"/>
+    <text  class="menu-desc" >30-60分钟到达\n现场</text>
+    <image class="menu-img" src="http://www.hems999.com/mobile//images/index03.png"/>
+    </navigator>
   </view>
 </view>
 <view class='blank'></view>
