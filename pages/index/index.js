@@ -52,21 +52,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log('taobao-onLoad')
-    var that = this;
-    wx.request({
-      url: 'https://www.hems999.com/index_weixin', //仅为示例，并非真实的接口地址
-      data: {},
-      header: {
-        'Content-Type': 'application/json'
-      },
-      success: function (res) {
-        console.log("从app.js请求服务器test.php获取数据")
-
-
-        console.log(res.data);
-      }
-    });
+    
   },
 
   /**
