@@ -148,6 +148,7 @@ table {
   border-right: 0;
   border-bottom: 0;
   width: 100%;
+  margin-bottom: 20rpx;
 }
 .tr {
   width: 100%;
@@ -155,7 +156,7 @@ table {
   justify-content: space-between;
 }
 .th,.td {
-  padding: 10rpx;
+  padding: 16rpx 10rpx;
   border-bottom: 1px solid #dadada;
   border-right: 1px solid #dadada;
   text-align: center;
@@ -164,8 +165,8 @@ table {
   color: #666;
 }
 .th {
-  font-weight: 400;
-  background-color: #dadada
+  font-weight: bold;
+  background-color: #dadada;
 }
 .textL{
   text-align: left;
@@ -178,4 +179,33 @@ table {
 }
 .noborder .th,.noborder .td{
   border-right: none;
+}
+.noindent{
+  text-indent: 0;
+}
+.nameBlack{
+  color: #333;
+  font-size: 34rpx;
+  margin-right: 10rpx;
+  font-weight: bold;
+}
+.nameGreen{
+  color: #026a19;
+  font-size: 34rpx;
+  font-weight: bold;
+}
+.jobTitle{
+  background: #dadada;
+  font-weight: bold;
+  display: block;
+  font-size: 30rpx;
+  height:70rpx;
+  line-height: 70rpx;
+  padding-left: 10rpx;
+  margin-bottom: 10rpx;
+  color: #666;
+}
+.table .td navigator{
+  text-decoration: underline;
+  color: #026a19;
 }

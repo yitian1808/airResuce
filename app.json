@@ -2,21 +2,27 @@
   "pages":[
     
     "pages/index/index",
-    "pages/list/list",
-    "pages/index1/index",
-    "pages/logs/logs",
-    "pages/jieshao/jieshao",
+    "pages/about/list",
+    "pages/about/jieshao",
     "pages/about/about",
-    "pages/shebei/shebei",
+    "pages/about/shebei",
+    "pages/about/jidi",
+    "pages/about/yiyuan",
+    "pages/about/lingdao",
+    "pages/about/liucheng",
     "pages/news/news",
-    "pages/detail/detail"
+    "pages/detail/detail",
+    "pages/join/join",
+    "pages/join/job_pilot",
+    "pages/join/job_jiwu",
+    "pages/join/job_dispatch",
+    "pages/join/job_doctor"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "九九九空中救护",
-    "navigationBarTextStyle":"black",
-    "enablePullDownRefresh": true
+    "navigationBarTextStyle":"black"
   },
   "tabBar": {
     "color": "#888",
@@ -32,13 +38,13 @@
       },
       {
         "text": "分类",
-        "pagePath": "pages/list/list",
+        "pagePath": "pages/about/list",
         "iconPath": "images/nav02.png",
         "selectedIconPath": "images/nav02A.png"
       },
       {
         "text": "我的",
-        "pagePath": "pages/index1/index",
+        "pagePath": "pages/index/index",
         "iconPath": "images/nav03.png",
         "selectedIconPath": "images/nav03A.png"
       }

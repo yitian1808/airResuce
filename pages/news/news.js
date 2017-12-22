@@ -1,81 +1,84 @@
-var network_util = require('../../utils/network_util.js');
-var json_util = require('../../utils/json_util.js');
+var url = "news.json";
+var page = 0;
+var page_size = 5;
+var sort = "last";
+var is_easy = 0;
+var lange_id = 0;
+var pos_id = 0;
+var unlearn = 0;
+
+
+// 请求数据
+var loadMore = function (that) {
+  that.setData({
+    hidden: false
+  });
+  wx.request({
+    url: url,
+    data: {
+      page: page,
+      page_size: page_size,
+      sort: sort,
+      is_easy: is_easy,
+      lange_id: lange_id,
+      pos_id: pos_id,
+      unlearn: unlearn
+    },
+    success: function (res) {
+      //console.info(that.data.list);
+      var list = that.data.list;
+      for (var i = 0; i < res.data.list.length; i++) {
+        list.push(res.data.list[i]);
+      }
+      that.setData({
+        list: list
+      });
+      page++;
+      that.setData({
+        hidden: true
+      });
+    }
+  });
+}
 Page({
   data: {
-    // text:"这是一个页面"
+    hidden: true,
     list: [],
-    dd: '',
-    hidden: false,
-    page: 1,
-    size: 20,
-    hasMore: true,
-    hasRefesh: false
+    scrollTop: 0,
+    scrollHeight: 0
   },
-  onLoad: function (options) {
+  onLoad: function () {
+    //   这里要注意，微信的scroll-view必须要设置高度才能监听滚动事件，所以，需要在页面的onLoad事件中给scroll-view的高度赋值
     var that = this;
-    var url = 'http://v.juhe.cn/weixin/query?key=f16af393a63364b729fd81ed9fdd4b7d&pno=1&ps=10';
-    network_util._get(url,
-      function (res) {
+    wx.getSystemInfo({
+      success: function (res) {
         that.setData({
-          list: res.data.result.list,
-          hidden: true,
+          scrollHeight: res.windowHeight
         });
-      }, function (res) {
-        console.log(res);
-      });
-  },
-  onReady: function () {
-    // 页面渲染完成
-  },
-  onShow: function () {
-    // 页面显示
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
-  },
-  //点击事件处理
-  bindViewTap: function (e) {
-    console.log(e.currentTarget.dataset.title);
-  },
-  //加载更多
-  loadMore: function (e) {
-    var that = this;
-    that.setData({
-      hasRefesh: true,
+      }
     });
-    if (!this.data.hasMore) return
-    var url = 'http://v.juhe.cn/weixin/query?key=f16af393a63364b729fd81ed9fdd4b7d&pno=' + (++that.data.page) + '&ps=10';
-    network_util._get(url,
-      function (res) {
-        that.setData({
-          list: that.data.list.concat(res.data.result.list),
-          hidden: true,
-          hasRefesh: false,
-        });
-      }, function (res) {
-        console.log(res);
-      })
+    loadMore(that);
   },
-  //刷新处理
-  refesh: function (e) {
+  //页面滑动到底部
+  bindDownLoad: function () {
     var that = this;
-    that.setData({
-      hasRefesh: true,
-    });
-    var url = 'http://v.juhe.cn/weixin/query?key=f16af393a63364b729fd81ed9fdd4b7d&pno=1&ps=10';
-    network_util._get(url,
-      function (res) {
-        that.setData({
-          list: res.data.result.list,
-          hidden: true,
-          page: 1,
-          hasRefesh: false,
-        });
-      }, function (res) {
-        console.log(res);
-      })
+    loadMore(that);
+    console.log("lower");
   },
+  scroll: function (event) {
+    //该方法绑定了页面滚动时的事件，我这里记录了当前的position.y的值,为了请求数据之后把页面定位到这里来。
+    this.setData({
+      scrollTop: event.detail.scrollTop
+    });
+  },
+  topLoad: function (event) {
+    //   该方法绑定了页面滑动到顶部的事件，然后做上拉刷新
+    page = 0;
+    this.setData({
+      list: [],
+      scrollTop: 0
+    });
+    loadMore(this);
+    console.log("lower");
+  }
 })

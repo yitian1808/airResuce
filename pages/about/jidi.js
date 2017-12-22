@@ -27,7 +27,7 @@ Page({
   onShow: function () {
     wx.showNavigationBarLoading();
     wx.setNavigationBarTitle({
-      title: '关于空中救护'
+      title: '救援基地'
     })
   },
 
